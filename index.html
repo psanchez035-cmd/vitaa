@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!--AQUI VIENEN LOS METADATOS Y LA CONEXIÓN AL style.css-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Pamela Sanchez">
+  <meta name="description" content="Tienda en línea de termos Owala y Stanley.">
+  <meta name="keywords" content="termos, Owala, Stanley, termos personalizados, regalos">
+  <!--Es el título de la página web-->
+  <title>Vita - Termos y productos personalizados</title>
+  <!--Enlaza con la hoja de estilo-->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="paper-texture">
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">
+      <img src="img/logo termo.png" alt="vita" width="70px" height="70px">
+       <!--span class="logo-icon"></span>-->
+      Vita
+    </a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Vita.')">
+        <i data-lucide="message-circle"></i>
+        Pedir ahora
+      </button>
+    </nav>
+
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu">
+      ☰
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="mobile-nav">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#oferta">Oferta</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Vita.')">
+      <i data-lucide="message-circle"></i>
+      Pedir ahora
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Detalles que hacen sonreír</p>
+        <h1>Termos que acompañan tu estilo todos los días</h1>
+        <p class="lead">
+          Descubre termos Owala y Stanley para mantener tus bebidas a la temperatura ideal y darle personalidad a tu rutina.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#productos" class="btn primary">Ver productos</a>
+
+          <button
+            type="button"
+            class="btn outline"
+            onclick="openWhatsApp('Hola, vi su página y me gustaría comprar un termo.')">
+            Comprar por WhatsApp
+          </button>
+        </div>
+
+        <p class="trust">
+          <i data-lucide="heart"></i>
+          Termos ideales para tu día
+        </p>
+      </div>
+
+      <div class="hero-image reveal">
+        <img src="img/owalacherry.jpg" alt="Termo Owala en color cereza">
+        <span class="tag tag-love">Termos en tendencia</span>
+        <span class="tag tag-custom">Pedidos personalizados</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTOS ================= -->
+  <section id="productos" class="products">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Conecta con tu rutina diaria</p>
+        <h2>Conoce nuestros productos</h2>
+        <p class="lead">Elige el termo ideal para acompañar cada momento de tu día.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <img src="img/owalatransparente.jpg" alt="Termo Owala transparente">
+          <div class="product-body">
+            <span class="tag">Favorito</span>
+            <h3>Owala</h3>
+            <p class="price">$550 MXN</p>
+            <p class="description">Owala transparente, ideal para bebidas frías.</p>
+            <button type="button" class="btn card" onclick="openModal('modal-owala')">
+              Ver producto
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <img src="img/owalachiquito.jpg" alt="Owala mini transparente">
+          <div class="product-body">
+            <span class="tag">En tendencia</span>
+            <h3>Owala mini</h3>
+            <p class="price">$500 MXN</p>
+            <p class="description">Owala mini transparente, ideal para café frío.</p>
+            <button type="button" class="btn card" onclick="openModal('modal-owala-mini')">
+              Ver producto
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <img src="img/stanley.jpg" alt="Termo Stanley">
+          <div class="product-body">
+            <span class="tag">Básico</span>
+            <h3>Stanley</h3>
+            <p class="price">$999 MXN</p>
+            <p class="description">Termo ideal para cualquier tipo de bebida.</p>
+            <button type="button" class="btn card" onclick="openModal('modal-stanley')">
+              Ver producto
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFICIOS ================= -->
+  <section id="beneficios" class="benefits">
+    <div class="container">
+      <div class="section-heading reveal">
+        <h2>¿Por qué comprarnos?</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3>Productos de calidad</h3>
+          <p>Elegimos termos prácticos, resistentes y con diseños increíbles.</p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">
+            <i data-lucide="message-circle-heart"></i>
+          </div>
+          <h3>Atención rápida</h3>
+          <p>Te respondemos con cercanía, rapidez y claridad.</p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">
+            <i data-lucide="truck"></i>
+          </div>
+          <h3>Envíos</h3>
+          <p>Llevamos tus termos hasta donde los necesites.</p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">
+            <i data-lucide="mouse-pointer-click"></i>
+          </div>
+          <h3>Compra fácil</h3>
+          <p>Elige tu termo, escríbenos y realiza tu pedido fácilmente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFERTA ================= -->
+  <section id="oferta" class="offer">
+    <div class="container">
+      <div class="offer-panel reveal">
+        <span class="tag tag-light">Oferta de bienvenida</span>
+
+        <h2>10% de descuento en tu primer pedido</h2>
+
+        <p>
+          Empieza con un termo especial y recibe un descuento en tu primera compra.
+        </p>
+
+        <button
+          id="offer-button"
+          type="button"
+          class="btn butter"
+          aria-expanded="false"
+          onclick="revealOffer()">
+          Quiero mi descuento
+        </button>
+
+        <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+          <p class="offer-reveal-title">
+            ¡Listo! Tu código de bienvenida es:
+          </p>
+
+          <div class="offer-code-row">
+            <span class="offer-code">DULCE10</span>
+
+            <button
+              id="copy-code"
+              type="button"
+              class="btn outline"
+              onclick="copyDiscount()">
+              Copiar código
+            </button>
+
+            <button
+              type="button"
+              class="btn whatsapp"
+              onclick="openWhatsApp('Hola, quiero usar mi código DULCE10 en mi primer pedido.')">
+              Pedir por WhatsApp
+            </button>
+          </div>
+
+          <p id="copy-feedback" class="copy-feedback hidden" role="status">
+            Código copiado
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIOS ================= -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experiencias bonitas</p>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="testimonial-viewport">
+        <div id="testimonial-track" class="testimonial-track">
+          <article class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img
+                  class="avatar"
+                  src="https://tse1.explicit.bing.net/th/id/OIP.xcKD3w58xiM1l9211ExZMwHaE8?r=0&pid=ImgDet&w=179&h=119&c=7&dpr=1.3&o=7&rm=3"
+                  alt="Retrato de una clienta">
+
+                <div>
+                  <p class="name">Mariana R.</p>
+                  <p class="occasion">Owala</p>
+                </div>
+              </div>
+
+              <p class="quote">
+                "El termo llegó perfecto y le encantó a mi amiga."
+              </p>
+
+              <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img
+                  class="avatar"
+                  src="https://th.bing.com/th/id/OIP.PL0l_X0zaHw2On68A0KN-AHaET?w=283&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                  alt="Retrato de un cliente">
+
+                <div>
+                  <p class="name">Diego M.</p>
+                  <p class="occasion">Stanley</p>
+                </div>
+              </div>
+
+              <p class="quote">
+                "Increíble compra, amé el color y la atención."
+              </p>
+
+              <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img
+                  class="avatar"
+                  src="https://tse1.mm.bing.net/th/id/OIP.WEYnW6n_E-kp-CfUvBdb8AHaEJ?r=0&pid=ImgDet&w=179&h=100&c=7&dpr=1.3&o=7&rm=3"
+                  alt="Retrato de una clienta">
+
+                <div>
+                  <p class="name">Sofía L.</p>
+                  <p class="occasion">Owala mini</p>
+                </div>
+              </div>
+
+              <p class="quote">
+                "Me encantó, llegó en perfecto estado y es muy práctico."
+              </p>
+
+              <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button id="testimonial-prev" type="button" aria-label="Testimonio anterior">
+          <i data-lucide="arrow-left"></i>
+        </button>
+
+        <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+          <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+          <button aria-label="Ver testimonio 2" aria-current="false"></button>
+          <button aria-label="Ver testimonio 3" aria-current="false"></button>
+        </div>
+
+        <button id="testimonial-next" type="button" aria-label="Siguiente testimonio">
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="contact">
+    <div class="container contact-panel reveal">
+      <div class="contact-text">
+        <p class="eyebrow">Estamos cerca</p>
+        <h2>Encuentra el termo ideal para ti</h2>
+
+        <p class="lead">
+          Escríbenos para conocer disponibilidad, colores y opciones para tu próximo termo.
+        </p>
+
+        <button
+          type="button"
+          class="btn primary"
+          onclick="openWhatsApp('Hola, quiero conocer los termos disponibles.')">
+          Escribir por WhatsApp
+        </button>
+      </div>
+
+      <aside class="contact-info" aria-label="Datos de contacto">
+        <ul>
+          <li>
+            <i data-lucide="instagram"></i>
+            <a href="https://www.instagram.com/pameschzz?stkn=dzI3d3I0c3psYzFq" target="_blank" rel="noopener noreferrer">
+              @vita
+            </a>
+          </li>
+
+          <li>
+            <i data-lucide="facebook"></i>
+            <a href="https://www.tiktok.com/@pameschzz?_r=1&_t=ZS-99yQKhhMduw" target="_blank" rel="noopener noreferrer">
+              Vita
+            </a>
+          </li>
+
+          <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:pamela.schz51@gmail.com">
+              pamela.schz51@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <i data-lucide="clock-3"></i>
+            Lunes a sábado, 10:00 a 19:00
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= MODALES DE PRODUCTOS ================= -->
+  <div id="modal-owala" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-owala-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/owalatransparente.jpg" alt="Termo Owala transparente">
+
+        <button
+          type="button"
+          class="modal-close"
+          aria-label="Cerrar ventana"
+          onclick="closeModal('modal-owala')">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-owala-title">Owala</h2>
+        <p class="price">$550 MXN</p>
+        <p>Owala transparente, ideal para bebidas frías y para acompañarte todos los días.</p>
+
+        <button
+          type="button"
+          class="btn whatsapp"
+          onclick="openWhatsApp('Hola, quiero comprar un Owala transparente.')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-owala-mini" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-owala-mini-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/owalachiquito.jpg" alt="Owala mini transparente">
+
+        <button
+          type="button"
+          class="modal-close"
+          aria-label="Cerrar ventana"
+          onclick="closeModal('modal-owala-mini')">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-owala-mini-title">Owala mini</h2>
+        <p class="price">$500 MXN</p>
+        <p>Owala mini transparente, práctico para bebidas frías y para llevar a cualquier lugar.</p>
+
+        <button
+          type="button"
+          class="btn whatsapp"
+          onclick="openWhatsApp('Hola, quiero comprar un Owala mini.')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-stanley" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-stanley-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/stanley.jpg" alt="Termo Stanley">
+
+        <button
+          type="button"
+          class="modal-close"
+          aria-label="Cerrar ventana"
+          onclick="closeModal('modal-stanley')">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-stanley-title">Stanley</h2>
+        <p class="price">$999 MXN</p>
+        <p>Termo Stanley ideal para conservar tus bebidas y acompañarte durante todo el día.</p>
+
+        <button
+          type="button"
+          class="btn whatsapp"
+          onclick="openWhatsApp('Hola, quiero comprar un termo Stanley.')">
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+</main>
+<!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Dulce Detalle</p>
+      <p class="love">Hecho con cariño</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+
+<button
+  id="whatsapp-float"
+  class="whatsapp-float"
+  type="button"
+  aria-label="Contactar por WhatsApp"
+  onclick="openWhatsApp('Hola, quiero hacer un pedido en Vita.')">
+  <i data-lucide="message-circle"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
